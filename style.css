@@ -1,0 +1,251 @@
+/* ==========================
+   RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+
+.hero{
+    background:linear-gradient(rgba(0,90,158,0.8), rgba(0,90,158,0.8)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+
+    background-size:cover;
+    background-position:center;
+    min-height:70vh;
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
+    text-align:center;
+    color:white;
+    padding:40px 20px;
+}
+
+
+.hero-content{
+    max-width:800px;
+}
+
+
+.logo{
+    width:180px;
+    margin-bottom:25px;
+}
+
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+
+/* ==========================
+   TIMELINE
+========================== */
+
+
+.timeline{
+    display:flex;
+    gap:25px;
+    padding:50px 30px;
+
+
+    overflow-x:auto;
+    scroll-behavior:smooth;
+}
+
+
+/* scrollbar */
+
+
+.timeline::-webkit-scrollbar{
+    height:10px;
+}
+
+
+.timeline::-webkit-scrollbar-thumb{
+    background:#0071C5;
+    border-radius:10px;
+}
+
+
+.timeline::-webkit-scrollbar-track{
+    background:#ddd;
+}
+
+
+/* ==========================
+   CARD
+========================== */
+
+
+.card{
+    flex:0 0 320px;
+
+
+    background:white;
+    border-radius:12px;
+
+
+    overflow:hidden;
+
+
+    border-top:6px solid #0071C5;
+
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
+
+    transition:.3s;
+}
+
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+
+.card h2{
+    color:#0071C5;
+    padding:20px 20px 5px;
+}
+
+
+.card h3{
+    padding:0 20px 15px;
+    color:#222;
+}
+
+
+.card p{
+    padding:20px;
+    font-size:.95rem;
+}
+
+
+/* ==========================
+   HOVER DETAILS
+========================== */
+
+
+/* Hide some of the text initially */
+
+
+.card p{
+    max-height:90px;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+
+.card:hover p{
+    max-height:350px;
+}
+
+
+/* ==========================
+   FIGURE
+========================== */
+
+
+figure{
+    margin:0;
+}
+
+
+figcaption{
+    text-align:center;
+    padding:5px;
+    background:#eef5fb;
+    font-size:.75rem;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+
+.footer-text{
+    text-align:center;
+    margin:30px;
+    color:#666;
+    font-style:italic;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+
+@media(max-width:768px){
+
+
+    .hero{
+        min-height:55vh;
+    }
+
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+
+    .hero p{
+        font-size:1rem;
+    }
+
+
+    .logo{
+        width:140px;
+    }
+
+
+    .timeline{
+        flex-direction:column;
+        overflow-x:visible;
+        align-items:center;
+    }
+
+
+    .card{
+        width:95%;
+        flex:none;
+    }
+}
